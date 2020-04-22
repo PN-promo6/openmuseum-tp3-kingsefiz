@@ -1,7 +1,8 @@
 <article class="card mb-3 shadow-sm">
   <div class="card-body">
+    <img src="{{museumImage}}" class="card-img-top mb-2" alt="...">
     <div class="card-title">
-      <h2 class="h4 mb-3">Musée Pablo Picasso</h2>
+      <h2 class="h4 mb-3">{{museumName}}</h2>
     </div>
 
     <div class="">
@@ -14,7 +15,7 @@
       </div>
       <div class="col-10">
         <p class="card-text">
-          Place Mariejol 06600 Antibes
+          {{museumAdress}} {{museumZipCode}} {{museumCity | titlecase}}
         </p>
       </div>
     </div>
@@ -24,7 +25,7 @@
         📞
       </div>
       <div class="col-10">
-        <p class="card-text"><a href="tel:0492905420">0492905420</a></p>
+        <p class="card-text"><a href="tel:{{museumPhone}}">{{museumPhone}}</a></p>
       </div>
     </div>
     <!-- Website -->
@@ -34,7 +35,7 @@
       </div>
       <div class="col-10">
         <p class="card-text">
-          <a href="www.antibes-juanlespins.com" target="blank">www.antibes-juanlespins.com</a>
+          <a href="www.antibes-juanlespins.com" target="blank">{{museumWebSite}}</a>
         </p>
       </div>
     </div>
@@ -44,13 +45,22 @@
         🕒
       </div>
       <div class="col-10">
-        <p class="card-text">Ouvert du 16 septembre au 14 juin de 10h à 12h et de 14h à 18h, du 15 juin au 15 septembre de 10h à 18h. Nocturnes en juillet et août le mercredi et le vendredi jusqu'à 20h</p>
+        <p class="card-text">{{museumOpening}}</p>
+      </div>
+    </div>
+    <!-- Museum fax -->
+    <div class="row mb-2">
+      <div class="col-1">
+        📠
+      </div>
+      <div class="col-10">
+        <p class="card-text">Fax : <a href="fax:{{museumFax}}">{{museumPhone}}</a></p>
       </div>
     </div>
     <!-- View detail -->
     <div class="row mb-2">
       <div class="col-1">
-        ➕
+        🔙
       </div>
       <div class="col-10">
         <p class="card-text"><a routerLink="">Retour en arrière</a></p>

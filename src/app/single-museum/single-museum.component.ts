@@ -8,14 +8,14 @@ import { MuseumListService } from '../services/museumList.service';
 })
 
 export class SingleMuseumComponent implements OnInit {
-  @Input() museumId : number;
-  @Input() museumName : string;
-  @Input() museumAdress : string;
-  @Input() museumZipCode : string;
-  @Input() museumCity : string;
-  @Input() museumPhone : string;
-  @Input() museumWebSite : string;
-  @Input() museumOpening : string;
+  @Input() museumRef: string;
+  @Input() museumName: string;
+  @Input() museumAdress: string;
+  @Input() museumZipCode: string;
+  @Input() museumCity: string;
+  @Input() museumPhone: string;
+  @Input() museumWebSite: string;
+  @Input() museumOpening: string;
   @Input() museumImage;
 
   constructor(private museumListService: MuseumListService) { }

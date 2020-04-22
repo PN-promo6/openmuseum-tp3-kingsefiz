@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+//Import of the leaflet library
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+
 import { AppComponent } from './app.component';
 // Service contenant le JSON de tous les musées et les méthodes associées
 import { MuseumListService } from './services/museumList.service';
@@ -17,12 +20,12 @@ import { MuseumDetailComponent } from './museum-detail/museum-detail.component';
 import { SingleMuseumComponent } from './single-museum/single-museum.component';
 
 const appRoutes: Routes = [
-{ path: 'singleMuseum', component: SingleMuseumComponent },
-{ path: 'addMuseum', component: AddMuseumComponent },
-{ path: 'museum/:ref_musee', component: MuseumDetailComponent},
-{ path: '', component: MuseumListComponent},
-{ path: 'not-found', component: NotFoundComponent },
-{ path: '**', redirectTo: 'not-found' }
+  { path: 'singleMuseum', component: SingleMuseumComponent },
+  { path: 'addMuseum', component: AddMuseumComponent },
+  { path: 'museums/:museumRef', component: MuseumDetailComponent },
+  { path: '', component: MuseumListComponent },
+  { path: 'not-found', component: NotFoundComponent },
+  { path: '**', redirectTo: 'not-found' }
 ];
 
 @NgModule({
@@ -36,7 +39,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
   ],
   providers: [MuseumListService],
   bootstrap: [AppComponent]

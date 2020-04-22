@@ -238,10 +238,10 @@ export class MuseumListService {
       image: "./assets/images/image12.jpg"
     }]
 
-  getMuseumbyId(ref_musee: any) {
+  getMuseumByRef(museumRef: string) {
     const museum = this.museums.find(
       (s) => {
-        return s.ref_musee === ref_musee;
+        return s.ref_musee === museumRef;
       }
     );
     return museum;

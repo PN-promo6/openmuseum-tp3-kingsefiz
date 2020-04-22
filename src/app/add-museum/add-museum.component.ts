@@ -11,5 +11,4 @@ export class AddMuseumComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }
