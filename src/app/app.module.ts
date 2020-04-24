@@ -2,9 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-//Import of the leaflet library
-import { LeafletModule } from '@asymmetrik/ngx-leaflet';
-
 import { AppComponent } from './app.component';
 // Service contenant le JSON de tous les musées et les méthodes associées
 import { MuseumListService } from './services/museumList.service';

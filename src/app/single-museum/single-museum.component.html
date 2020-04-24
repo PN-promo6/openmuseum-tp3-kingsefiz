@@ -1,8 +1,10 @@
 <article class="card mb-3 shadow-sm">
   <div class="card-body">
-    <img src="{{museumImage}}" class="card-img-top mb-2" alt="...">
+    <a [routerLink]="['museums/', museumRef]"><img src="{{museumImage}}" class="card-img-top mb-2" alt="..."></a>
     <div class="card-title">
-      <h2 class="h4 mb-3">{{museumName}}</h2>
+      <a [routerLink]="['museums/', museumRef]">
+        <h2 class="h4 mb-3" style="text-decoration: none">{{museumName}}</h2>
+      </a>
     </div>
 
     <!-- <div class="coverPhoto" [ngStyle]="background-image:url(./assets/image)">
